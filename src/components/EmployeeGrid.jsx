@@ -114,7 +114,7 @@ export default function EmployeeGrid() {
                 <div className="mb-3">
                     <input
                         type="text"
-                        placeholder="Search by Full Name"
+                        placeholder="Search employees"
                         value={filterText}
                         onChange={onFilterTextBoxChanged}
                         className="px-3 py-2 w-70 bg-[#F9FAFB] text-black border border-[#F9FAFB] rounded-md focus:ring-2 focus:ring-[rgba(255,255,255,0.4)] outline-none"
