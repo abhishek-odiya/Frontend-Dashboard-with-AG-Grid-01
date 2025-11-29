@@ -80,7 +80,6 @@ export default function EmployeeGrid() {
         []
     );
 
-
     const onFilterTextBoxChanged = (e) => {
         const value = e.target.value;
         setFilterText(value);
