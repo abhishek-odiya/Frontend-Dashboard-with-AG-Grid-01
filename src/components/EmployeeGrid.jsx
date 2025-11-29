@@ -98,10 +98,17 @@ export default function EmployeeGrid() {
     };
 
 
+    const handleExportCsv = () =>
+        gridRef.current?.api.exportDataAsCsv({
+            fileName: "employees.csv",
+        });
+
+
+
     return (
         <div className="px-10">
 
-            {/* Title */}
+            {/* Heading's */}
             <h1 className="text-[27px] font-bold text-center mb-1">Frontend Dashboard with AG Grid</h1>
             <p className="text-gray-600 mb-3 text-center">
                 Fetch data from a given file and implement searching, filtering, and sorting.
@@ -111,14 +118,24 @@ export default function EmployeeGrid() {
             <div className="bg-[#C7C9CE] rounded-xl shadow-xl px-8 py-3 border border-[#F9FAFB] h-155">
 
                 {/* Search Bar */}
-                <div className="mb-3">
+                <div className="mb-3 flex items-center">
                     <input
                         type="text"
                         placeholder="Search employees"
                         value={filterText}
                         onChange={onFilterTextBoxChanged}
-                        className="px-3 py-2 w-70 bg-[#F9FAFB] text-black border border-[#F9FAFB] rounded-md focus:ring-2 focus:ring-[rgba(255,255,255,0.4)] outline-none"
+                        className="px-3 h-[37px] py-2 w-70 bg-[#F9FAFB] text-black border border-[#F9FAFB] rounded-md focus:ring-2 focus:ring-[rgba(255,255,255,0.4)] outline-none"
                     />
+
+                    {/* Export Button */}
+                    <button
+                        onClick={handleExportCsv}
+                        className="ml-auto px-4 py-1 bg-[#F9FAFB] h-[37px] text-black border border-[#F9FAFB] rounded-md focus:ring-2 focus:ring-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.5)] transition"
+                    >
+                        Export CSV
+                    </button>
+
+
                 </div>
 
                 {/* Grid */}
