@@ -107,16 +107,12 @@ export default function EmployeeGrid() {
     return (
         <div className="px-10">
 
-            {/* Heading's */}
             <h1 className="text-[27px] font-bold text-center mb-1">Frontend Dashboard with AG Grid</h1>
             <p className="text-gray-600 mb-3 text-center">
                 Fetch data from a given file and implement searching, filtering, and sorting.
             </p>
 
-            {/* Container */}
             <div className="bg-[#C7C9CE] rounded-xl shadow-xl px-8 py-3 border border-[#F9FAFB] h-155">
-
-                {/* Search Bar */}
                 <div className="mb-3 flex items-center">
                     <input
                         type="text"
@@ -126,18 +122,14 @@ export default function EmployeeGrid() {
                         className="px-3 h-[37px] py-2 w-70 bg-[#F9FAFB] text-black border border-[#F9FAFB] rounded-md focus:ring-2 focus:ring-[rgba(255,255,255,0.4)] outline-none"
                     />
 
-                    {/* Export Button */}
                     <button
                         onClick={handleExportCsv}
                         className="ml-auto px-4 py-1 bg-[#F9FAFB] h-[37px] text-black border border-[#F9FAFB] rounded-md focus:ring-2 focus:ring-[rgba(255,255,255,0.1)] hover:bg-[rgba(255,255,255,0.5)] transition"
                     >
                         Export CSV
                     </button>
-
-
                 </div>
 
-                {/* Grid */}
                 <div className="ag-theme-alpine-dark w-full h-135">
                     <AgGridReact
                         ref={gridRef}
@@ -150,7 +142,6 @@ export default function EmployeeGrid() {
                         animateRows={true}
                     />
                 </div>
-
             </div>
         </div>
     );
