@@ -141,7 +141,7 @@ export default function EmployeeGrid() {
                         defaultColDef={defaultColDef}
                         pagination={true}
                         paginationPageSize={10}
-                        paginationPageSizeSelector={[10, 20, 50]}
+                        paginationPageSizeSelector={[10, 20]}
                         animateRows={true}
                     />
                 </div>
