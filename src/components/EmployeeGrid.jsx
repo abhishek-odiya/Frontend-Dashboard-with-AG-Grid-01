@@ -51,6 +51,9 @@ export default function EmployeeGrid() {
                 valueFormatter: (p) => `$${p.value.toLocaleString()}`,
             },
             { field: "hireDate", width: 120 },
+            { field: "age", width: 100 },
+            { field: "performanceRating", width: 100 },
+            { field: "projectsCompleted", width: 100 },
             {
                 field: "isActive",
                 width: 110,
